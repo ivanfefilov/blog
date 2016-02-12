@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160212150812) do
+ActiveRecord::Schema.define(:version => 20160212152405) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -32,6 +32,17 @@ ActiveRecord::Schema.define(:version => 20160212150812) do
 
   add_index "posts", ["title"], :name => "index_posts_on_title"
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
+
+  create_table "scores", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.integer  "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "scores", ["post_id"], :name => "index_scores_on_post_id"
+  add_index "scores", ["user_id"], :name => "index_scores_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
