@@ -1,1 +1,7 @@
-<h1>Private dashboard</h1>
+<div class="jumbotron">
+  <h1>Hello! <%= current_user.name %></h1>
+  <p>You can manage you posts.</p>
+  <p>
+    <%= link_to t('app.user.posts.posts'), user_posts_path(current_user), :class => "btn btn-primary btn-lg" %>
+  </p>
+</div>

@@ -10,4 +10,13 @@ en:
         sign_in: Sign in
         sign_up: Sign up
         sign_out: Sign out
-        edit_profile: Edit 
+        edit_profile: Edit
+    user:
+      posts:
+        posts: Posts
+        new: New post
+    forms:
+      submit: Submit
+      cancel: Cancel
+      delete: Delete
+      edit: Edit   

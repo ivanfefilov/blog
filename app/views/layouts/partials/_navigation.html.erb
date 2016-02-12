@@ -11,9 +11,14 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li>
-                <a href="#">Link</a>
-              </li>
+              <% if user_signed_in? %>
+                <li>
+                  <%= link_to t('app.user.posts.posts'), user_posts_path(current_user) %>
+                </li>
+                <li>
+                  <%= link_to t('app.user.posts.new'), new_user_post_path(current_user) %>
+                </li>
+              <% end %>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <% if user_signed_in? %>
@@ -30,7 +35,7 @@
                       <%= link_to t('app.navigation.user.sign_out'), destroy_user_session_path %>
                     </li>
                   </ul>
-                </li>  
+                </li>
               <% else %>
                 <li>
                   <%= link_to t('app.navigation.user.sign_in'), new_user_session_path %>

@@ -1,0 +1,26 @@
+<% if @post.new_record? %>
+  <% form_url = user_posts_path(@user) %>
+<% else %>
+  <% form_url = user_post_path(@user, @post) %>
+<% end %>
+
+<% form_for [@user, @post], :url => form_url  do |f| -%>
+  <%= f.error_messages %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.text_area :body, :class => "form-control" %>
+  </div>
+
+  <% unless @post.new_record? %>
+    <div class="right">
+      <%= link_to t('app.forms.delete'), user_post_path(@user, @post), :class => "btn btn-danger", :confirm => "Are you sure?", :method => :delete %>
+    </div>
+  <% end %>
+
+  <%= f.submit t('app.forms.submit'), :class => "btn btn-primary" %>
+  <%= link_to t('app.forms.cancel'), :back, :class => "btn btn-link" %>
+<% end -%>

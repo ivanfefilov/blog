@@ -1,7 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :posts
-
   map.devise_for :users
+
+  map.resources :users do |users|
+    users.resources :posts
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
 
