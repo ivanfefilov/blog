@@ -3,3 +3,11 @@
 
 en:
   hello: "Hello world"
+
+  app:
+    navigation:
+      user:
+        sign_in: Sign in
+        sign_up: Sign up
+        sign_out: Sign out
+        edit_profile: Edit 

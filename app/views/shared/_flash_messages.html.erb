@@ -1,0 +1,18 @@
+<div class='row alert-box'>
+  <div class='col-md-12'>
+    <% flash.each do |type, content| %>
+      <% flash_class = "alert-danger" if type.to_s == "alert" %>
+      <% flash_class = "alert-warning" if type.to_s == "notice" %>
+      <% flash_class = "alert-success" if type.to_s == "success" %>
+      <% div_class = [flash_class, "alert alert-dismissible fade in"].join(" ") %>
+      <% if content.is_a?(String) %>
+        <div role="alert" class="<%= div_class %>">
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">×</span>
+           </button> <strong>
+           <%= content %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
