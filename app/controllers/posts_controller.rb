@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  def index
+  end  
+
   def new
   end
 
@@ -12,5 +15,5 @@ class PostsController < ApplicationController
   end
 
   def update
-  end          
+  end
 end

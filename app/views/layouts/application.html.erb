@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%= render 'layouts/partials/head' %>
+  </head>
+  <body>
+    <div class="wrapper-holder">
+      <div id="wrapper">
+        <div id="header">
+          <%= render 'layouts/partials/header' %>
+        </div>
+        <div id="main">
+          <div id="content">
+            <%#= flash_messages %>
+            <%= yield %>
+          </div>
+          <asise id="sidebar">
+            <%#= render partial: 'layouts/partials/sidebar' %>
+          </asise>
+        </div>
+        <div id="footer">
+          <%= render 'layouts/partials/footer' %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

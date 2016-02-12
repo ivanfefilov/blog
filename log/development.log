@@ -38,3 +38,497 @@ Migrating to DeviseCreateUsers (20160211085500)
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_users_on_confirmation_token')[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_users_on_email')[0m
 DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from /home/forever/projects/blog/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from /home/forever/projects/blog/app/models/user.rb:4)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from /home/forever/projects/blog/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from /home/forever/projects/blog/app/models/user.rb:4)
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2016-02-11 15:52:27) [GET]
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 70ms (View: 14, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from /home/forever/projects/blog/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead. (called from /home/forever/projects/blog/app/models/user.rb:4)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:44:47) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+/home/forever/projects/blog/app/views/layouts/application.html.erb:4: syntax error, unexpected ':', expecting ')'
+...uffer.concat(( render partial: 'layouts/partials/head' ).to_...
+                              ^
+/home/forever/projects/blog/app/views/layouts/application.html.erb:10: syntax error, unexpected ':', expecting ')'
+...uffer.concat(( render partial: 'layouts/partials/header' ).t...
+                              ^
+/home/forever/projects/blog/app/views/layouts/application.html.erb:22: syntax error, unexpected ':', expecting ')'
+...uffer.concat(( render partial: 'layouts/partials/footer' ).t...
+                              ^
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!doctype html>\n<html lang=\"en\">\n  <head>\n    "
+
+
+; @output_buffer.concat(( render partial: 'layouts/partials/head' ).to_s); @output_buffer.concat "\n  </head>\n  <body>\n    <div class=\"wrapper-holder\">\n      <div id=\"wrapper\">\n        <div id=\"header\">\n          "
+
+
+
+
+
+; @output_buffer.concat(( render partial: 'layouts/partials/header' ).to_s); @output_buffer.concat "\n        </div>\n        <div id=\"main\">\n          <div id=\"content\">\n            "
+
+
+
+; @output_buffer.concat "\n            "
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n          </div>\n          <asise id=\"sidebar\">\n            "
+
+
+; @output_buffer.concat "\n          </asise>\n        </div>\n        <div id=\"footer\">\n          "
+
+
+
+; @output_buffer.concat(( render partial: 'layouts/partials/footer' ).to_s); @output_buffer.concat "\n        </div>\n      </div>\n    </div>\n  </body>\n</html>\n"
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/forever/projects/blog/app/views/layouts/application.html.erb:31:in `compile!'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:352:in `_render_with_layout'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:262:in `render'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action_without_filters'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `send'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/warden-0.10.7/lib/warden/manager.rb:35:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/head.rb:9:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/methodoverride.rb:24:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `synchronize'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/lock.rb:11:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/rails/rack/static.rb:31:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:47:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `each'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/urlmap.rb:41:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/content_length.rb:13:in `call'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:48:in `service'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rack-1.1.6/lib/rack/handler/webrick.rb:14:in `run'
+/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/commands/server.rb:111
+script/server:3:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/forever/projects/blog/app/views/layouts/application.html.erb:4: syntax error, unexpected ':', expecting ')'
+...uffer.concat(( render partial: 'layouts/partials/head' ).to_...
+                              ^
+/home/forever/projects/blog/app/views/layouts/application.html.erb:10: syntax error, unexpected ':', expecting ')'
+...uffer.concat(( render partial: 'layouts/partials/header' ).t...
+                              ^
+/home/forever/projects/blog/app/views/layouts/application.html.erb:22: syntax error, unexpected ':', expecting ')'
+...uffer.concat(( render partial: 'layouts/partials/footer' ).t...
+                              ^) on line #4 of app/views/layouts/application.html.erb:
+1: <!doctype html>
+2: <html lang="en">
+3:   <head>
+4:     <%= render partial: 'layouts/partials/head' %>
+5:   </head>
+6:   <body>
+7:     <div class="wrapper-holder">
+
+    app/views/layouts/application.html.erb:31:in `compile!'
+    warden (0.10.7) lib/warden/manager.rb:35:in `call'
+    warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.7) lib/warden/manager.rb:34:in `call'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (4.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:46:20) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+
+ActionView::TemplateError (Missing layout layouts/partials/_head.erb in view path app/views:/home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/gems/1.8/gems/devise-1.0.7/app/views) on line #4 of app/views/layouts/application.html.erb:
+1: <!doctype html>
+2: <html lang="en">
+3:   <head>
+4:     <%= render 'layouts/partials/head' %>
+5:   </head>
+6:   <body>
+7:     <div class="wrapper-holder">
+
+    app/views/layouts/application.html.erb:4
+    warden (0.10.7) lib/warden/manager.rb:35:in `call'
+    warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.7) lib/warden/manager.rb:34:in `call'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:46:52) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.4ms)
+Rendered layouts/partials/_header (0.4ms)
+Rendered layouts/partials/_footer (0.3ms)
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:46:53) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.0ms)
+Rendered layouts/partials/_header (0.0ms)
+Rendered layouts/partials/_footer (0.0ms)
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:47:36) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.0ms)
+Rendered layouts/partials/_header (0.0ms)
+Rendered layouts/partials/_footer (0.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:54:33) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+
+ActionView::TemplateError (No expansion found for :application) on line #8 of app/views/layouts/partials/_head.html.erb:
+5: <meta name="author" content="">
+6: <title>Blog</title>
+7: 
+8: <%= stylesheet_link_tag :application %>
+
+    app/views/layouts/partials/_head.html.erb:8
+    app/views/layouts/application.html.erb:4
+    warden (0.10.7) lib/warden/manager.rb:35:in `call'
+    warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.7) lib/warden/manager.rb:34:in `call'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (97.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:55:19) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.7ms)
+Rendered layouts/partials/_header (0.0ms)
+Rendered layouts/partials/_footer (0.0ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:55:20) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.2ms)
+Rendered layouts/partials/_header (0.1ms)
+Rendered layouts/partials/_footer (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:58:36) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.2ms)
+Rendered layouts/partials/_header (0.0ms)
+Rendered layouts/partials/_footer (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:58:36) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.3ms)
+Rendered layouts/partials/_header (0.0ms)
+Rendered layouts/partials/_footer (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:58:37) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.2ms)
+Rendered layouts/partials/_header (0.0ms)
+Rendered layouts/partials/_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:58:37) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.2ms)
+Rendered layouts/partials/_header (0.1ms)
+Rendered layouts/partials/_footer (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 17:59:13) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.8ms)
+Rendered layouts/partials/_header (0.1ms)
+Rendered layouts/partials/_footer (0.0ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-02-11 17:59:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/bootstrap.css.map" with {:method=>:get}):
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 18:02:29) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.3ms)
+Rendered layouts/partials/_header (0.1ms)
+Rendered layouts/partials/_footer (1.4ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-02-11 18:02:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/bootstrap.css.map" with {:method=>:get}):
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 18:03:37) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.3ms)
+Rendered layouts/partials/_header (0.0ms)
+Rendered layouts/partials/_footer (1.6ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-02-11 18:03:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/bootstrap.css.map" with {:method=>:get}):
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 18:04:02) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.2ms)
+Rendered layouts/partials/_header (0.0ms)
+Rendered layouts/partials/_footer (1.4ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-02-11 18:04:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/bootstrap.css.map" with {:method=>:get}):
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 18:04:16) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.3ms)
+Rendered layouts/partials/_header (0.1ms)
+Rendered layouts/partials/_footer (1.4ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-02-11 18:04:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/bootstrap.css.map" with {:method=>:get}):
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2016-02-11 18:04:28) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+Rendered layouts/partials/_head (0.2ms)
+Rendered layouts/partials/_header (0.0ms)
+Rendered layouts/partials/_footer (1.9ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2016-02-11 18:04:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/bootstrap.css.map" with {:method=>:get}):
+  warden (0.10.7) lib/warden/manager.rb:35:in `call'
+  warden (0.10.7) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.7) lib/warden/manager.rb:34:in `call'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/forever/.rbenv/versions/1.8.7-p374/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
