@@ -11,6 +11,7 @@ en:
         sign_up: Sign up
         sign_out: Sign out
         edit_profile: Edit
+      users: Users  
     user:
       posts:
         posts: Posts
@@ -19,4 +20,4 @@ en:
       submit: Submit
       cancel: Cancel
       delete: Delete
-      edit: Edit   
+      edit: Edit

@@ -1,8 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.devise_for :users
 
   map.resources :users do |users|
-    users.resources :posts
+    users.resources :posts do |posts|
+      posts.resources :comments
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
