@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :except => :show
+  before_filter :authenticate_user!, :except => [:show, :best, :popular]
   before_filter :set_user, :except => :show
-  before_filter :set_post, :except => [:index, :new, :create]
+  before_filter :set_post, :except => [:index, :new, :create, :best, :popular]
 
   def index
     @posts = @user.posts
@@ -41,6 +41,14 @@ class PostsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def popular
+    @posts = Post.popular
+  end
+
+  def best
+    @posts = Post.best
   end
 
   private

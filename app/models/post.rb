@@ -11,15 +11,16 @@ class Post < ActiveRecord::Base
   attr_accessible :user_id, :title, :body
 
   def average_score
-    scores.map(&:value).sum / scores.map(&:value).count
+    return 0 if scores.count.zero?
+    scores.map(&:value).sum / scores.count
   end
 
   class << self
-    def best_posts
+    def best
       all.sort { |x,y| x.average_score <=> y.average_score }.reverse.take(3)
     end
 
-    def popular_posts
+    def popular
       all.sort { |x,y| x.comments.count <=> y.comments.count }.reverse.take(3)
     end
   end

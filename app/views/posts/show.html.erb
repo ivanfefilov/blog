@@ -8,4 +8,5 @@
   <p>Posted on <%= l(@post.created_at, :format => :long) %></p>
   <hr>
   <p><%= raw @post.body %></p>
+  <%= link_to(t('app.navigation.back'), :back, :class => "btn btn-primary") %>
 </div>

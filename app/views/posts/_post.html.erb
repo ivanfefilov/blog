@@ -1,11 +1,9 @@
 <h2>
   <%= link_to post.title, post_path(post) %>
 </h2>
-<% unless post.user == current_user %>
-  <p class="lead">
-    by <%= post.user.name %>
-  </p>
-<% end %>
+<p class="lead">
+  by <%= post.user.name %>
+</p>
 <p>Posted on <%= l(post.created_at, :format => :long) %></p>
 <hr>
 <p><%= truncate(post.body, :length => 100) %></p>

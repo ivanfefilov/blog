@@ -12,6 +12,7 @@ en:
         sign_out: Sign out
         edit_profile: Edit
       users: Users
+      back: Back
     user:
       posts:
         my_posts: My posts
