@@ -11,11 +11,12 @@ en:
         sign_up: Sign up
         sign_out: Sign out
         edit_profile: Edit
-      users: Users  
+      users: Users
     user:
       posts:
-        posts: Posts
+        my_posts: My posts
         new: New post
+        view_more: View more
     forms:
       submit: Submit
       cancel: Cancel

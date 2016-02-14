@@ -13,10 +13,10 @@
             <ul class="nav navbar-nav">
               <% if user_signed_in? %>
                 <li>
-                  <%= link_to t('app.user.posts.posts'), user_posts_path(current_user) %>
+                  <%= link_to t('app.user.posts.my_posts'), posts_path %>
                 </li>
                 <li>
-                  <%= link_to t('app.user.posts.new'), new_user_post_path(current_user) %>
+                  <%= link_to t('app.user.posts.new'), new_post_path %>
                 </li>
               <% else %>
                 <li>

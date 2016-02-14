@@ -2,6 +2,9 @@
   <h1 class="page-header">
     <%= @post.title %>
   </h1>
+  <p class="lead">
+    by <%= @post.user.name %>
+  </p>
   <p>Posted on <%= l(@post.created_at, :format => :long) %></p>
   <hr>
   <p><%= raw @post.body %></p>
