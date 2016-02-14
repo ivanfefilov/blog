@@ -51,6 +51,15 @@ class PostsController < ApplicationController
     @posts = Post.best
   end
 
+  def comments
+    @comments = @post.comments
+  end
+
+  def create_comment
+    #@comment = @post.comments.build(params[:comment])
+    #if @comment.save
+  end
+
   private
 
   def set_user

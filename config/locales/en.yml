@@ -23,3 +23,5 @@ en:
       cancel: Cancel
       delete: Delete
       edit: Edit
+    comments:
+      show: Show comments  
