@@ -1,0 +1,10 @@
+<div class="well">
+    <h4>Leave a Comment:</h4>
+    <% form_remote_tag :url =>  create_comment_post_path(post) do -%>
+        <div class="form-group">
+          <%= text_area_tag :body, nil, :class => "form-control", :rows => "3" %>
+        </div>
+        <%= submit_tag "Create comment", :class => "btn btn-primary" %>
+    <% end -%>
+</div>
+<hr>

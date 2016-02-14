@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.devise_for :users
 
-  map.resources :posts, :member => { :comments => :get }
+  map.resources :posts, :member => { :comments => :get, :create_comment => :post }
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

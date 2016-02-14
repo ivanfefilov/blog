@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show, :best, :popular]
+  before_filter :authenticate_user!, :except => [:show, :best, :popular, :comments, :create_comment]
   before_filter :set_user, :except => :show
   before_filter :set_post, :except => [:index, :new, :create, :best, :popular]
 
@@ -56,8 +56,11 @@ class PostsController < ApplicationController
   end
 
   def create_comment
-    #@comment = @post.comments.build(params[:comment])
-    #if @comment.save
+    unless current_user
+      render :js => "alert('You must first log in for creating comment!');"
+      return
+    end
+    @comment = @post.comments.create(:user_id => @user.id, :body => params[:body])
   end
 
   private

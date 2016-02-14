@@ -1,1 +1,1 @@
-page.replace_html 'comments', :partial => 'shared/comments', :collection => @comments
+page.replace_html 'comments', :partial => 'shared/comment', :collection => @comments

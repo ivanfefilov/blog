@@ -8,7 +8,11 @@
   <p>Posted on <%= l(@post.created_at, :format => :long) %></p>
   <hr>
   <p><%= raw @post.body %></p>
-  <%= link_to_remote t('app.comments.show'), :url => comments_post_path(@post), :method => :get %>
+  <hr>
+  <div id="comment-form">
+    <%= render :partial => "shared/comment_form", :locals => {:post => @post} %>
+  </div>
   <div id="comments">
+    <%= link_to_remote t('app.comments.show'), :url => comments_post_path(@post), :method => :get %>
   </div>
 </div>
