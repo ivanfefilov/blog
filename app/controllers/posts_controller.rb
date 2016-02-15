@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_filter :authenticate_user!, :except => [:show, :best, :popular, :comments, :create_comment]
   before_filter :set_user, :except => :show
   before_filter :set_post, :except => [:index, :new, :create, :best, :popular]
+  after_filter :send_comments_email, :only => :create_comment
 
   def index
     @posts = @user.posts.paginate(:page => params[:page], :per_page => 10)
@@ -87,5 +88,11 @@ class PostsController < ApplicationController
 
   def create_post_comment
     @post.comments.create(:user_id => @user.id, :body => params[:body])
+  end
+
+  def send_comments_email
+    if @post.comments.count == 3
+      UserMailer.deliver_comments_email(@post.user, @post)
+    end  
   end
 end
