@@ -6,13 +6,17 @@ class Post < ActiveRecord::Base
   has_many :comments, :dependent => :destroy
   has_many :scores, :dependent => :destroy
 
-  default_scope :order => 'created_at'
+  default_scope :order => 'created_at DESC'
 
   attr_accessible :user_id, :title, :body
 
   def average_score
     return 0 if scores.count.zero?
     scores.map(&:value).sum / scores.count
+  end
+
+  def has_rating_from(user)
+    scores.first(:conditions => ["user_id = ?", user.id]).present?            
   end
 
   class << self

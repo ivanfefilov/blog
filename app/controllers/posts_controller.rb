@@ -60,7 +60,9 @@ class PostsController < ApplicationController
       render :js => "alert('You must first log in for creating comment!');"
       return
     end
-    @comment = @post.comments.create(:user_id => @user.id, :body => params[:body])
+    create_post_score
+    create_post_comment
+    @comments = @post.comments
   end
 
   private
@@ -75,5 +77,15 @@ class PostsController < ApplicationController
 
   def post_params
     params[:post]
+  end
+
+  def create_post_score
+    if params[:rating].present? && !@post.has_rating_from(@user)
+      @post.scores.create(:user_id => @user.id, :value => params[:rating])
+    end
+  end
+
+  def create_post_comment
+    @post.comments.create(:user_id => @user.id, :body => params[:body])
   end
 end

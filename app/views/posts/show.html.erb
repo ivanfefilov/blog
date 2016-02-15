@@ -6,13 +6,15 @@
     by <%= @post.user.name %>
   </p>
   <p>Posted on <%= l(@post.created_at, :format => :long) %></p>
-  <p>Post rating: <span class="badge"><%= @post.average_score %></span></p>
-  <p>Post comments count: <span class="badge"><%= @post.comments.count %></span></p>
+  <p>Post rating: <span class="badge" id="postRating"><%= @post.average_score %></span></p>
+  <p>Post comments count: <span class="badge" id="postCommentsCount"><%= @post.comments.count %></span></p>
   <hr>
   <p><%= raw @post.body %></p>
   <hr>
   <div id="comment-form">
-    <%= render :partial => "shared/comment_form", :locals => {:post => @post} %>
+    <% unless current_user.is_creator_of @post %>
+      <%= render :partial => "shared/comment_form" %>
+    <% end %>
   </div>
   <div id="comments">
     <%= link_to_remote t('app.comments.show'), :url => comments_post_path(@post), :method => :get %>

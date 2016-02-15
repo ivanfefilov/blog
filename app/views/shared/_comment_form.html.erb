@@ -1,6 +1,14 @@
 <div class="well">
-    <h4>Leave a Comment:</h4>
-    <% form_remote_tag :url =>  create_comment_post_path(post) do -%>
+    <h4>Leave a Comment and rating:</h4>
+    <% form_remote_tag :url =>  create_comment_post_path(@post) do -%>
+        <% unless @post.has_rating_from current_user %>
+          <div class="btn-group" id="ratingBtns" role="group">
+            <% (1..5).each do |i| %>
+              <%= label_tag i.to_s %>
+              <%= radio_button_tag :rating, i %>
+            <% end %>
+          </div>
+        <% end %>  
         <div class="form-group">
           <%= text_area_tag :body, nil, :class => "form-control", :rows => "3" %>
         </div>

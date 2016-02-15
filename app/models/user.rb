@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   has_many :posts, :dependent => :destroy
   has_many :scores, :dependent => :destroy
   has_many :comments, :dependent => :destroy
+
+  def is_creator_of(post)
+    id == post.user_id
+  end
 end
