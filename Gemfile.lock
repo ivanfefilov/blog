@@ -29,6 +29,7 @@ GEM
     rdoc (4.2.2)
       json (~> 1.4)
     sqlite3 (1.3.11)
+    tiny_mce (0.1.8)
     warden (0.10.7)
       rack (>= 1.0.0)
     will_paginate (2.3.16)
@@ -42,6 +43,7 @@ DEPENDENCIES
   rails (~> 2.3.5)
   rdoc
   sqlite3
+  tiny_mce
   will_paginate (~> 2.3.16)
 
 BUNDLED WITH
