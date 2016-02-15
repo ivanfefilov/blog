@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_filter :set_post, :except => [:index, :new, :create, :best, :popular]
 
   def index
-    @posts = @user.posts
+    @posts = @user.posts.paginate(:page => params[:page], :per_page => 10)
   end
 
   def new

@@ -6,6 +6,7 @@
     <div id="posts">
       <%= render :partial => 'posts/post', :collection => @posts %>
     </div>
+    <%= will_paginate @posts %>
   </div>
 
   <div class="col-md-4">
