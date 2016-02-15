@@ -6,6 +6,8 @@
     by <%= @post.user.name %>
   </p>
   <p>Posted on <%= l(@post.created_at, :format => :long) %></p>
+  <p>Post rating: <span class="badge"><%= @post.average_score %></span></p>
+  <p>Post comments count: <span class="badge"><%= @post.comments.count %></span></p>
   <hr>
   <p><%= raw @post.body %></p>
   <hr>
