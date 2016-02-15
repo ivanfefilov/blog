@@ -12,8 +12,10 @@
   <p><%= raw @post.body %></p>
   <hr>
   <div id="comment-form">
-    <% unless current_user.is_creator_of @post %>
-      <%= render :partial => "shared/comment_form" %>
+    <% if user_signed_in? %>
+      <% unless current_user.is_creator_of @post  %>
+        <%= render :partial => "shared/comment_form" %>
+      <% end %>
     <% end %>
   </div>
   <div id="comments">
